@@ -1,0 +1,23 @@
+ideas = {
+
+	country = {
+		FRA_factory_strikes = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				industrial_capacity_factory  = -0.9
+				industrial_capacity_dockyard = -0.9
+				unity_factor = -0.1
+			}
+		}
+	}	
+}

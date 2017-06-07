@@ -1,0 +1,13 @@
+#THE HYEP ISRAEL
+focus_tree = {
+	id = com_focus
+	
+	country = {
+        #ideology = communism
+		factor = 0
+	}
+	
+	reset_on_civilwar = no
+	
+	}
+

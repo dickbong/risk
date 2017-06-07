@@ -1,0 +1,40 @@
+state={
+	id=357
+	name="STATE_357"
+	
+
+    state_category = wasteland
+
+
+	history={
+   		owner = NEW
+		add_core_of = NEW
+		buildings = {
+            infrastructure = 0
+			
+			
+			
+			
+			6732 = {
+				naval_base = 8
+
+			}
+			9832 = {
+				naval_base = 3
+
+			}
+
+		}
+ 
+		
+		
+		
+
+	}
+
+	provinces={
+		715 718 733 905 908 3710 3712 3715 3906 4445 6732 6909 7629 9675 9832 9847 9850 10481 11830 13158 
+	}
+	manpower = 1
+	
+}

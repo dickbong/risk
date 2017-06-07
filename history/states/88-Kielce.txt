@@ -1,0 +1,25 @@
+state={
+	id=88 # Krakow
+	name="STATE_88"
+	manpower = 1
+	
+	
+    state_category = wasteland
+
+	history={
+ 
+		
+		buildings = {
+            infrastructure = 0
+			
+			
+			
+		}
+ 
+		victory_points = { 417 1}
+	}
+
+	provinces={
+		417 442 466 3410 6464 6499 6522 9412 9427 11398 11413 11507 
+	}
+}

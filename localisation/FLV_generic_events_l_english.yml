@@ -1,0 +1,119 @@
+﻿l_english:
+ flavor.0.t:0 ""
+ flavor.0.d:0 ""
+ flavor.0.a:0 ""
+ 
+ flavor.1.t:0 "Political Rally"
+ flavor.1.d:0 "[Root.GetLeader]'s appearance to the public and political rally seems to have picked up some more followers to our cause. Moments like these show the true followers of our ideology. We applaud those who will stop at nothing to attend every rally we hold."
+ flavor.1.a:0 "Bravissimo!"
+ 
+ flavor.4.t:0 "Union Strikes"
+ flavor.4.d:0 "Recent clashes between unions and their employers have forced workers to go on strikes. Our factories our empty and production has practically stopped altogether. We hope we can hold through these tough times."
+ flavor.4.a:0 "Damn."
+ 
+ flavor.5.t:0 "Resources Found"
+ flavor.5.d:0 "Mining companies recently found new resources underground. With this new breakthrough we can make new guns, tanks, vehicles and more. Resources are a vital cornerstone of keeping our national sovereignty."
+ flavor.5.a:0 "Great."
+ 
+ flavor.6.t:0 "Factory Accident"
+ flavor.6.d:0 "A horrible accident has happened in one of our factories! While doing his job, a worker accidently dropped a wrench into one of the machines, hitting a vital part, causing the machine to explode. The factory will be temporarily disabled and may take awhile to fix."
+ flavor.6.a:0 "Damn."
+ 
+ flavor.7.t:0 "Technological Breakthrough"
+ flavor.7.d:0 "Our scientists have recently come upon a breakthrough in electronic science. New innovations have elucidated better models of industry, radar, and more. With these upgrades, our enemies never stood a chance."
+ flavor.7.a:0 "Great."
+ 
+ flavor.8.t:0 "Diplomatic Quarrel"
+ flavor.8.d:0 "Recently officials between [Root.GetName] and [From.GetName] got into a quarrel and hurt relations between our countries. Hopefully we are able to resolve the situation and no more hostilities come with it."
+ flavor.8.a:0 "Unfortunate."
+ 
+ flavor.9.t:0 "Holdiday Parade"
+ flavor.9.d:0 "Families united on this recent national holiday to celebrate with a parade. Luckily, the festivites and merriment have distracted them from their differences and political spite. Rejoice, for our people grow stronger in will and unity."
+ flavor.9.a:0 "'Huzzah.'"
+ 
+ flavor.10.t:0 "Political Protests"
+ flavor.10.d:0 "Current outrage with our government has forced politicians to go into hiding. Some cannot make it to work without being bombarded with stones by protesters. The outcry to concede our government grows, but we will prevail."
+ flavor.10.a:0 "Unfortunate."
+ 
+ flavor.11.t:0 "The Iron Youth"
+ flavor.11.d:0 "With the help of our talented generals, the new recruits are getting better and better at what they do. Hopefully, we can whip these young men into shape and mold them into experienced soldiers."
+ flavor.11.a:0 "Grand."
+ 
+ flavor.12.t:0 "Surplus Equipment"
+ flavor.12.d:0 "Miscalculations in timing in schedule have resulted in a surplus of infantry equiment. Fortunately, this mistake can be put to good use."
+ flavor.12.a:0 "Excellent!"
+ 
+ flavor.13.t:0 "Hardy Seamen"
+ flavor.13.d:0 "With the help of our talented admirals, the new sailors are earning their 'sea-legs' faster than ever before. Hopefully, we can whip these young men into shape and experienced sea-men."
+ flavor.13.a:0 "Excellent."
+ 
+ flavor.14.t:0 "Deserters"
+ flavor.14.d:0 "As our numbers grow larger, so do the number of deserters. More recruits are becoming aware of the horrors of war and are sneaking out at night and running from battles."
+ flavor.14.a:0 "Damn."
+ 
+ flavor.15.t:0 "[FROM.GetName] Instigates Diplomatic Quarrel"
+ flavor.15.d:0 "Recently officials between [Root.GetName] and [From.GetName] got into a quarrel and hurt relations between our countries. The insitgation from the other country is insulting and in general, lowered their public image. Diplomatic relations which such people should be minimal."
+ flavor.15.a:0 "Unfortunate."
+
+ flavor.16.t:0 "Bold Airmen"
+ flavor.16.d:0 "With the help of our talented air-marshalls, the new airmen are earning their 'air-wings' faster than ever before. Hopefully, we can whip these young men into shape and experienced pilots."
+ flavor.16.a:0 "Excellent."
+
+ flavor.17.t:0 "Public Demands Elections"
+ flavor.17.d:0 "The public has taken the streets yelling political slogans and demanding elections. Although elections would calm the public down, this responsiblity is a large burden."
+ flavor.17.a:0 "Our will is the people's will."
+ flavor.17.b:0 "No."
+
+ flavor.0.t:0 ""
+ flavor.0.d:0 ""
+ flavor.0.a:0 ""
+
+ flavor.0.t:0 ""
+ flavor.0.d:0 ""
+ flavor.0.a:0 ""
+
+ flavor.0.t:0 ""
+ flavor.0.d:0 ""
+ flavor.0.a:0 ""
+
+ flavor.0.t:0 ""
+ flavor.0.d:0 ""
+ flavor.0.a:0 ""
+
+ flavor.0.t:0 ""
+ flavor.0.d:0 ""
+ flavor.0.a:0 ""
+
+ flavor.0.t:0 ""
+ flavor.0.d:0 ""
+ flavor.0.a:0 ""
+
+ flavor.0.t:0 ""
+ flavor.0.d:0 ""
+ flavor.0.a:0 ""
+
+ flavor.0.t:0 ""
+ flavor.0.d:0 ""
+ flavor.0.a:0 ""
+
+ flavor.0.t:0 ""
+ flavor.0.d:0 ""
+ flavor.0.a:0 ""
+
+ flavor.0.t:0 ""
+ flavor.0.d:0 ""
+ flavor.0.a:0 ""
+
+ flavor.0.t:0 ""
+ flavor.0.d:0 ""
+ flavor.0.a:0 ""
+
+ flavor.0.t:0 ""
+ flavor.0.d:0 ""
+ flavor.0.a:0 ""
+
+ flavor.0.t:0 ""
+ flavor.0.d:0 ""
+ flavor.0.a:0 "" 
+ 
+ 

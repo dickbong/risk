@@ -1,0 +1,31 @@
+
+state={
+	id=304
+	name="STATE_304"
+	manpower = 1
+	
+	
+    state_category = wasteland
+	
+	history={
+		owner = CNA
+		add_core_of = CNA
+		buildings = {
+            infrastructure = 0
+			
+			
+			
+			7630 = {
+				naval_base = 4
+			}
+		}
+ 
+		victory_points = { 1633 1}
+		
+
+	}
+
+	provinces={
+		1633 4611 4624 7630 10482 
+	}
+}

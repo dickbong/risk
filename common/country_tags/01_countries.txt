@@ -1,0 +1,24 @@
+#NORTH/CENTRAL AMERICA
+#MAJORs
+NEW	= "countries/Thirteen Colonies.txt"
+AMF	= "countries/American Federation.txt"
+CBU	= "countries/Caribbean Union.txt"
+CND = "countries/Canadia.txt"
+MES	= "countries/Mexican State.txt"
+
+#MINORS
+CAL	= "countries/California.txt"
+COF	= "countries/Southern Confederation.txt"
+TEX	= "countries/Tejas.txt"
+QUE	= "countries/Quebec.txt"
+ROC	= "countries/Rocky Mountain Partition.txt"
+MID = "countries/Midwestern Border State.txt"
+CNA = "countries/United Central American Provinces.txt"
+
+#ONEPROVINCEMINORS
+FLR = "countries/Florida.txt"
+KNT = "countries/Kentucky.txt"
+BLZ = "countries/Belize.txt"
+SLV = "countries/Salvador.txt"
+NFL = "countries/Newfoundland.txt"
+PNL = "countries/Panama Canal.txt"

@@ -1,0 +1,27 @@
+state={
+	id=694
+	name="STATE_694"
+	manpower = 1
+
+    state_category = wasteland
+
+	history={
+			owner = CBU
+			add_core_of = CBU
+		buildings = {
+            infrastructure = 0
+			
+			177 = {
+				naval_base = 3
+			}
+			9377 = {
+				naval_base = 1
+			}
+		}
+		victory_points = { 177 1}
+	}
+	
+	provinces={
+		177 9377 13084 
+	}
+}

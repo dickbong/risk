@@ -1,0 +1,36 @@
+state={
+	id=743
+	name="STATE_743"
+	provinces={
+		1282 1338 1619 3732 4287 6719 7462 10247 10318 12202 12221 12459 
+	}
+	state_category = wasteland
+
+
+	history={
+   		owner = NEW
+		add_core_of = NEW
+		buildings = {
+            infrastructure = 0
+			
+			
+			
+			
+			6732 = {
+				naval_base = 8
+
+			}
+			9832 = {
+				naval_base = 3
+
+			}
+
+		}
+ 
+		
+		
+		
+
+	}
+	manpower = 1
+}

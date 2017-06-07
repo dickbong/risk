@@ -1,0 +1,379 @@
+﻿## RISK EVENTS ##
+
+add_namespace = risk
+
+country_event = {
+	id = risk.1
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		#state category
+		every_state = {
+			random_list = { 
+				20={ 
+					set_state_category = wasteland 
+					set_state_flag = has_state_category_wasteland 
+				}
+				30={ 
+					set_state_category = pastoral 
+					set_state_flag = has_state_category_pastoral 
+				}
+				50={ 
+					set_state_category = rural 
+					set_state_flag = has_state_category_rural
+				}
+				70={ 
+					set_state_category = town 
+					set_state_flag = has_state_category_town 
+				}
+				60={ 
+					set_state_category = large_town 
+					set_state_flag = has_state_category_large_town 
+				}
+				50={ 
+					set_state_category = city 
+					set_state_flag = has_state_category_city 
+				}
+				40={ 
+					set_state_category = large_city 
+					set_state_flag = has_state_category_large_city 
+				}
+				20={ 
+					set_state_category = metropolis 
+					set_state_flag = has_state_category_metropolis
+				}
+				10={ 
+					set_state_category = megalopolis 
+					set_state_flag = has_state_category_megalopolis
+				}
+			}
+		}
+		#resources
+		if = {
+			limit = { num_of_controlled_states > 2 }
+			every_state = {
+				random_list = {
+					60 = { }
+					20 = {
+						random_list={
+							1= { add_resource={type = oil amount = 106 } }
+							2= { add_resource={type = oil amount = 56 } }
+							4= { add_resource={type = oil amount = 16 } }
+							6= { add_resource={type = oil amount = 24 } }
+							8= { add_resource={ type = oil amount = 32 }  }
+						}
+					}
+					30 = {
+						random_list={
+							1={ add_resource = { type = chromium amount = 52 } }
+							2={ add_resource = { type = chromium amount = 16 } }
+							4={ add_resource = { type = chromium amount = 22 } }
+							5={ add_resource = { type = chromium amount = 26 } }
+							6={ add_resource = { type = chromium amount = 32 } }
+						}
+					}
+					40 = {
+						random_list={
+							1={ add_resource= { type = rubber amount = 96 } }
+							2={ add_resource= { type = rubber amount = 12 } }
+							4={ add_resource= { type = rubber amount = 34 } }
+							6={ add_resource= { type = rubber amount = 42 } }
+							8={ add_resource= { type = rubber amount = 54 } }
+						}
+					}
+					50 = {
+					random_list={
+							1={ add_resource = { type = tungsten amount = 64 } }
+							2={ add_resource = { type = tungsten amount = 10 } }
+							4={ add_resource = { type = tungsten amount = 8 } }
+							5={ add_resource = { type = tungsten amount = 16 } }
+							6={ add_resource = { type = tungsten amount = 32 } }
+						}
+					}
+					60 = {
+						random_list={
+							1={ add_resource = { type = aluminium amount = 64 } }
+							2={ add_resource = { type = aluminium amount = 10 } }
+							3={ add_resource = { type = aluminium amount = 8 } }
+							4={ add_resource = { type = aluminium amount = 16 } }
+							5={ add_resource = { type = aluminium amount = 32 } }
+						}
+					}
+					70 = {
+						random_list={
+							1={ add_resource = { type = steel amount = 128 } }
+							2={ add_resource = { type = steel amount = 64 } }
+							3={ add_resource = { type = steel amount = 16 } }
+							4={ add_resource = { type = steel amount = 24 } }
+							5={ add_resource= { type = steel amount = 42 } }
+						}
+					}
+				}
+			}
+		}
+		#oneprovminors resources
+		if = {
+			limit = { num_of_controlled_states < 2 } #1
+			every_state = {
+				random_list = {
+					20 = {
+						random_list={
+							1= { add_resource={type = oil amount = 208 } }
+							2= { add_resource={type = oil amount = 108 } }
+							4= { add_resource={type = oil amount = 32 } }
+							6= { add_resource={type = oil amount = 48 } }
+							8= { add_resource={ type = oil amount = 64 }  }
+						}
+					}
+					30 = {
+						random_list={
+							1={ add_resource = { type = chromium amount = 108 } }
+							2={ add_resource = { type = chromium amount = 32 } }
+							4={ add_resource = { type = chromium amount = 44 } }
+							5={ add_resource = { type = chromium amount = 50 } }
+							6={ add_resource = { type = chromium amount = 64 } }
+						}
+					}
+					40 = {
+						random_list={
+							1={ add_resource= { type = rubber amount = 192 } }
+							2={ add_resource= { type = rubber amount = 24 } }
+							4={ add_resource= { type = rubber amount = 68 } }
+							6={ add_resource= { type = rubber amount = 84 } }
+							8={ add_resource= { type = rubber amount = 108 } }
+						}
+					}
+					50 = {
+					random_list={
+							1={ add_resource = { type = tungsten amount = 128 } }
+							2={ add_resource = { type = tungsten amount = 20 } }
+							4={ add_resource = { type = tungsten amount = 56 } }
+							5={ add_resource = { type = tungsten amount = 32 } }
+							6={ add_resource = { type = tungsten amount = 64 } }
+						}
+					}
+					60 = {
+						random_list={
+							1={ add_resource = { type = aluminium amount = 128 } }
+							2={ add_resource = { type = aluminium amount = 82 } }
+							3={ add_resource = { type = aluminium amount = 24 } }
+							4={ add_resource = { type = aluminium amount = 32 } }
+							5={ add_resource = { type = aluminium amount = 64 } }
+						}
+					}
+					70 = {
+						random_list={
+							1={ add_resource = { type = steel amount = 256 } }
+							2={ add_resource = { type = steel amount = 128 } }
+							3={ add_resource = { type = steel amount = 56 } }
+							4={ add_resource = { type = steel amount = 96 } }
+							5={ add_resource= { type = steel amount = 84 } }
+						}
+					}
+				}
+			}
+		}
+		#manpower
+		every_state = {
+			if = { limit = { is_island_state = no }
+				random_list = { 
+					10={add_manpower = 150000}
+					30={add_manpower = 300000}
+					70={add_manpower = 600000}
+					90={add_manpower = 900000}
+					60={add_manpower = 1500000}
+					50={add_manpower = 2000000}
+					20={add_manpower = 3000000}
+					20={add_manpower = 4500000}
+					10={add_manpower = 6000000}
+				 }
+			}
+			if = { limit = { is_island_state = yes }
+				random_list = {
+					10={add_manpower = 6000}
+					30={add_manpower = 10000}
+					70={add_manpower = 17000}
+					90={add_manpower = 2300}
+					70={add_manpower = 35000}
+					50={add_manpower = 46000}
+					20={add_manpower = 55000}
+					20={add_manpower = 65000}
+					10={add_manpower = 80000}
+				}
+			}
+		}
+		#ideology
+		every_country = {
+			random_list = { 
+				50 = { set_politics = { ruling_party = fascism elections_allowed = no } }
+				50 = { set_politics = { ruling_party = democratic elections_allowed = yes } }
+			}
+		}
+		country_event = { id = risk.2 }
+	}
+	option = {
+	   name = ""
+	}
+}
+country_event = {
+	id = risk.2
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		every_state = {
+			limit = { has_state_flag = has_state_category_pastoral }
+			random_list={
+				60={}
+				20={add_building_construction={ type = arms_factory level = 1 instant_build = yes}}
+				20={add_building_construction={ type = industrial_complex level = 1 instant_build = yes}}
+		   }
+		   add_building_construction={ type = infrastructure level = 1 instant_build = yes}
+		   add_building_construction={ type = air_base level = 1 instant_build = yes}
+	   }
+	   every_state = {
+			limit = { has_state_flag = has_state_category_rural }
+			random_list={
+				34={add_building_construction={ type = arms_factory level = 1 instant_build = yes}}
+				16={add_building_construction={ type = arms_factory level = 1 instant_build = yes}add_building_construction={ type = industrial_complex level = 1 instant_build = yes}}
+				50={add_building_construction={ type = industrial_complex level = 1 instant_build = yes}}
+		   }
+		   add_building_construction={ type = infrastructure level = 2 instant_build = yes}
+		   add_building_construction={ type = air_base level = 2 instant_build = yes}
+	   }
+	   every_state = {
+			limit = { has_state_flag = has_state_category_town }
+			random_list={
+				34={add_building_construction={ type = arms_factory level = 1 instant_build = yes}add_building_construction={ type = industrial_complex level = 1 instant_build = yes}}
+				16={add_building_construction={ type = arms_factory level = 1 instant_build = yes}add_building_construction={ type = industrial_complex level = 2 instant_build = yes}}
+				50={add_building_construction={ type = industrial_complex level = 1 instant_build = yes}}
+		   }
+		   add_building_construction={ type = infrastructure level = 3 instant_build = yes}
+		   add_building_construction={ type = air_base level = 3 instant_build = yes}
+	   }
+	   every_state = {
+			limit = { has_state_flag = has_state_category_large_town }
+			random_list={
+				34={add_building_construction={ type = arms_factory level = 1 instant_build = yes}add_building_construction={ type = industrial_complex level = 1 instant_build = yes}}
+				16={add_building_construction={ type = arms_factory level = 1 instant_build = yes}add_building_construction={ type = industrial_complex level = 2 instant_build = yes}}
+				50={add_building_construction={ type = industrial_complex level = 1 instant_build = yes}}
+		   }
+		   add_building_construction={ type = infrastructure level = 4 instant_build = yes}
+		   add_building_construction={ type = air_base level = 4 instant_build = yes}
+	   }
+	   every_state = {
+			limit = { has_state_flag = has_state_category_large_town is_coastal = yes }
+			random_list={
+				66={add_building_construction={ type = dockyard level = 1 instant_build = yes}}
+				34={add_building_construction={ type = dockyard level = 1 instant_build = yes}}
+		   }
+	   }
+	   every_state = {
+			limit = { has_state_flag = has_state_category_city }
+			random_list={
+				16={add_building_construction={ type = arms_factory level = 2 instant_build = yes}add_building_construction={ type = industrial_complex level = 3 instant_build = yes}}
+				50={add_building_construction={ type = arms_factory level = 1 instant_build = yes}add_building_construction={ type = industrial_complex level = 2 instant_build = yes}}
+				34={add_building_construction={ type = arms_factory level = 2 instant_build = yes}add_building_construction={ type = industrial_complex level = 2 instant_build = yes}}
+		   }
+		   add_building_construction={ type = infrastructure level = 5 instant_build = yes}
+		   add_building_construction={ type = air_base level = 5 instant_build = yes}
+	   }
+	   every_state = {
+			limit = { has_state_flag = has_state_category_city is_coastal = yes }
+			random_list={
+				66={add_building_construction={ type = dockyard level = 1 instant_build = yes}}
+				34={add_building_construction={ type = dockyard level = 2 instant_build = yes}}
+		   }
+	   }
+	   every_state = {
+			limit = { has_state_flag = has_state_category_large_city }
+			random_list={
+				50={add_building_construction={ type = arms_factory level = 1 instant_build = yes}add_building_construction={ type = industrial_complex level = 3 instant_build = yes}}
+				16={add_building_construction={ type = arms_factory level = 2 instant_build = yes}add_building_construction={ type = industrial_complex level = 4 instant_build = yes}}
+				34={add_building_construction={ type = arms_factory level = 2 instant_build = yes}add_building_construction={ type = industrial_complex level = 3 instant_build = yes}}
+		   }
+		   add_building_construction={ type = infrastructure level = 6 instant_build = yes}
+		   add_building_construction={ type = air_base level = 6 instant_build = yes}
+	   }
+	   every_state = {
+			limit = { has_state_flag = has_state_category_large_city is_coastal = yes }
+			random_list={
+				66={add_building_construction={ type = dockyard level = 2 instant_build = yes}}
+				34={add_building_construction={ type = dockyard level = 2 instant_build = yes}}
+		   }
+	   }
+	   every_state = {
+			limit = { has_state_flag = has_state_category_metropolis }
+			random_list={
+				16={add_building_construction={ type = arms_factory level = 2 instant_build = yes}add_building_construction={ type = industrial_complex level = 4 instant_build = yes}}
+				50={add_building_construction={ type = arms_factory level = 2 instant_build = yes}add_building_construction={ type = industrial_complex level = 5 instant_build = yes}}
+				34={add_building_construction={ type = arms_factory level = 3 instant_build = yes}add_building_construction={ type = industrial_complex level = 5 instant_build = yes}}
+		   }
+		   add_building_construction={ type = infrastructure level = 7 instant_build = yes}
+		   add_building_construction={ type = air_base level = 7 instant_build = yes}
+	   }
+	   every_state = {
+			limit = { has_state_flag = has_state_category_metropolis is_coastal = yes }
+			random_list={
+				66={add_building_construction={ type = dockyard level = 2 instant_build = yes}}
+				33={add_building_construction={ type = dockyard level = 3 instant_build = yes}}
+		   }
+	   }
+	   every_state = {
+			limit = { has_state_flag = has_state_category_megalopolis }
+			random_list={
+				16={add_building_construction={ type = arms_factory level = 3 instant_build = yes}add_building_construction={ type = industrial_complex level = 4 instant_build = yes}}
+				50={add_building_construction={ type = arms_factory level = 3 instant_build = yes}add_building_construction={ type = industrial_complex level = 5 instant_build = yes}}
+				34={add_building_construction={ type = arms_factory level = 4 instant_build = yes}add_building_construction={ type = industrial_complex level = 6 instant_build = yes}}
+		   }
+		   add_building_construction={ type = infrastructure level = 8 instant_build = yes}
+		   add_building_construction={ type = air_base level = 8 instant_build = yes}
+	   }
+	   every_state = {
+			limit = { has_state_flag = has_state_category_megalopolis is_coastal = yes }
+			random_list={
+				66={add_building_construction={ type = dockyard level = 2 instant_build = yes}}
+				34={add_building_construction={ type = dockyard level = 3 instant_build = yes}}
+		   }
+	   }
+	   every_state = {
+			limit = { is_island_state = yes }
+			add_building_construction={ type = dockyard level = 1 instant_build = yes}
+			add_building_construction={ type = air_base level = 1 instant_build = yes}
+	   }
+	   set_global_flag = RISK_STARTED_EVENT
+	   #ideology reshuffle
+	   random_neighbor_country = {
+			limit = {
+				AND = {
+					ROOT = { has_government = democratic }
+					FROM = { has_government = democratic }
+				}
+			}
+			PREV = { set_politics = { ruling_party = fascism elections_allowed = no } }
+		}
+		random_neighbor_country = {
+			limit = {
+				AND = {
+					ROOT = { has_government = fascism }
+					FROM = { has_government = fascism }
+				}
+			}
+			PREV = { set_politics = { ruling_party = democratic elections_allowed = yes } }
+		}
+	}
+	option = {
+			name = ""
+	}	
+}
+
+country_event = {
+	id = risk.3
+	hidden = yes
+	trigger = {
+		has_global_flag = RISK_STARTED_EVENT
+	}
+	fire_only_once = yes
+	immediate = {
+		set_global_flag = RISK_STARTED
+	}
+}

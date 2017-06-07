@@ -1,0 +1,27 @@
+
+state={
+	id=478
+	name="STATE_478" # Jalisco
+	manpower = 1
+	
+    state_category = wasteland
+	
+	
+
+	history={
+		owner = MES
+		add_core_of = MES
+		buildings = {
+            infrastructure = 0
+		}
+ 
+		victory_points = { 2051 1}
+		
+
+	}
+
+	provinces={
+		2051 5052 10172 12746 12873 13089 
+	}
+	
+}

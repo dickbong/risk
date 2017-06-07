@@ -1,0 +1,30 @@
+difficulty_settings = {
+    difficulty_setting = {
+		key = "Aggressive AI"
+		multiplier = 1.0
+		modifier = risk_agression
+		countries = {
+			NEW
+			AMF
+			CBU
+			CND
+			MES
+
+			#MINORS
+			CAL
+			COF	
+			TEX	
+			QUE	
+			ROC
+			MID
+			CNA
+			#ONEPROVINCEMINORS
+			FLR
+			KNT
+			BLZ
+			SLV
+			NFL
+			PNL			
+		}	
+	}
+}

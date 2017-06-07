@@ -1,0 +1,174 @@
+# Written by "Dick Bong, Ace of Aces"
+
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# contain
+# area_priority
+
+##GENERIC
+
+ally_mexican_state = {
+	enable = {
+		
+		ROOT = { has_war = yes }
+		NOT = { tag = MES }
+		NOT = { has_war_with = MES }
+			OR = {
+				OR = {
+					AND = {
+						ROOT = { has_government = democratic }
+						MES = { has_government = democratic }
+					}
+					AND = {
+						ROOT = { has_government = fascism }
+						MES = { has_government = fascism }
+					}
+				}
+			strength_ratio = { tag = MES ratio < 0.65 }	
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = MES }
+			has_war_with = MES
+		}
+	}
+	
+	ai_strategy = {
+		type = alliance
+		id = "MES"			
+		value = 50
+	}	
+}
+
+protect_mexican_state = {
+	enable = {
+		ROOT = { is_neighbor_of = MES }
+		NOT = { tag = MES }
+		NOT = { has_war_with = MES }
+		OR = {
+			AND = {
+				ROOT = { has_government = democratic }
+				MES = { has_government = democratic }
+			}
+			AND = {
+				ROOT = { has_government = fascism }
+				MES = { has_government = fascism }
+			}
+		}
+		strength_ratio = { tag = MES ratio > 1.65 }	
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = MES }
+			has_war_with = MES
+		}
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "MES"			
+		value = 50
+	}
+}
+
+antagonize_mexican_state = {
+	enable = {
+		
+		NOT = { tag = MES }
+		AND = {
+			OR = {
+				AND = {
+					ROOT = { has_government = fascism }
+					MES = { has_government = democratic }
+				}
+				AND = {
+					ROOT = { has_government = democratic }
+					MES = { has_government = fascism }
+				}
+			}
+			strength_ratio = { tag = MES ratio > 1.00 }	
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = MES }
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "MES"			
+		value = 50
+	}	
+}
+
+conquer_mexican_state = {
+	enable = {
+		ROOT = { is_neighbor_of = GER }
+		NOT = { tag = MES }
+		AND = {
+			OR = {
+				AND = {
+					ROOT = { has_government = fascism }
+					MES = { has_government = democratic }
+				}
+				AND = {
+					ROOT = { has_government = democratic }
+					MES = { has_government = fascism }
+				}
+			}
+			strength_ratio = { tag = MES ratio > 1.00 }	
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = MES }
+		}
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "MES"			
+		value = 50
+	}	
+}
+
+weaken_mexican_state = {
+	enable = {
+		
+		NOT = { tag = MES }
+		AND = {
+			OR = {
+				AND = {
+					ROOT = { has_government = fascism }
+					MES = { has_government = democratic }
+				}
+				AND = {
+					ROOT = { has_government = democratic }
+					MES = { has_government = fascism }
+				}
+			}
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = MES }
+		}
+	}
+	
+	ai_strategy = {
+		type = contain
+		id = "MES"			
+		value = 50
+	}
+}

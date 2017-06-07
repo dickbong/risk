@@ -1,0 +1,26 @@
+
+state={
+	id=465
+	name="STATE_465"
+	manpower = 1
+	
+    state_category = wasteland
+
+	history={
+		owner = QUE
+		add_core_of = QUE
+		buildings = {
+            infrastructure = 0
+			
+			4285 = {
+				naval_base = 2
+			}
+		}
+ 
+		victory_points = { 634 1}
+	}
+
+	provinces={
+		634 1424 4285 4342 4362 4432 7379 12289 
+	}
+}

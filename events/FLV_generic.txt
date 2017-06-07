@@ -1,0 +1,608 @@
+﻿###########################
+# generic flavor events
+###########################
+
+add_namespace = flavor
+
+country_event = { #triggered from the ALB history file 
+	id = flavor.2
+	title = flavor.2.t
+	desc = flavor.2.d
+	fire_only_once = yes
+	hidden = yes
+	
+	trigger = {
+		date > 1936.1.1
+	}
+	
+	immediate = {
+		clr_country_flag = flavor_reset
+	}
+	
+	option = {
+		every_country = {
+			country_event = { id = flavor.3 hours = 1 }
+		}
+		name = flavor.a
+		set_country_flag = flavor_reset
+	}
+}
+
+#yearly reset & report
+country_event = {
+	id = flavor.3
+	title = flavor.3.t
+	desc = flavor.3.d
+	is_triggered_only = yes
+	hidden = yes
+
+	
+	immediate = {
+		country_event = { days = 365 id = flavor.3 }
+		clr_country_flag = flavor_reset
+		clr_country_flag = flavor_event_1
+		clr_country_flag = flavor_event_3
+		clr_country_flag = flavor_event_4
+		clr_country_flag = flavor_event_5
+		clr_country_flag = flavor_event_6
+		clr_country_flag = flavor_event_7
+		clr_country_flag = flavor_event_8
+		clr_country_flag = flavor_event_9
+		clr_country_flag = flavor_event_10
+		clr_country_flag = flavor_event_11
+		clr_country_flag = flavor_event_12
+		clr_country_flag = flavor_event_13
+		clr_country_flag = flavor_event_14
+		clr_country_flag = flavor_event_15
+		clr_country_flag = flavor_event_16
+		clr_country_flag = flavor_event_17
+		clr_country_flag = flavor_event_18
+		clr_country_flag = flavor_event_19
+		clr_country_flag = flavor_event_20
+		clr_country_flag = flavor_event_21
+		clr_country_flag = flavor_event_22
+		clr_country_flag = flavor_event_23
+		clr_country_flag = flavor_event_24
+		clr_country_flag = flavor_event_25
+		clr_country_flag = flavor_event_26
+		clr_country_flag = flavor_event_27
+		clr_country_flag = flavor_event_28
+		clr_country_flag = flavor_event_29
+		
+	}
+	
+	option = {
+		name = flavor.a
+		set_country_flag = flavor_reset
+	}
+}
+
+country_event = { #political rally
+	id = flavor.1
+	title = flavor.1.t
+	desc = flavor.1.d
+	picture = GFX_report_event_generic_rally
+	
+	mean_time_to_happen = { days = 730 }
+	
+	trigger = {
+		has_country_flag = flavor_reset
+		NOT = {
+			has_country_flag = flavor_event_1
+		}
+	}
+	
+	option = {
+		name = flavor.1.a
+		set_country_flag = flavor_event_1
+		add_political_power = 50
+		if = {
+			limit = {
+				has_government = democratic
+			}
+			add_popularity = { ideology = democratic popularity = 0.02 }
+		}
+		if = {
+			limit = {
+				has_government = fascism
+			}
+			add_popularity = { ideology = fascism popularity = 0.02 }
+		}
+	}
+}
+
+country_event = { #union struggles
+	id = flavor.4
+	title = flavor.4.t
+	desc = flavor.4.d
+	picture = GFX_report_event_generic_riot
+	
+	mean_time_to_happen = { 
+		days = 730
+		modifier = {
+			factor = 2
+			has_government = communism
+		}
+		modifier = {
+			factor = 3
+			has_war = yes
+		}
+	}
+	
+	trigger = {
+		has_country_flag = flavor_reset
+		NOT = {
+			has_country_flag = flavor_event_4
+		}
+	}
+	
+	option = {
+		name = flavor.4.a
+		set_country_flag = flavor_event_4
+		add_timed_idea = {
+			idea = FRA_factory_strikes
+			days = 25
+		}
+	}
+}
+
+country_event = { #resources found!
+	id = flavor.5
+	title = flavor.5.t
+	desc = flavor.5.d
+	picture = GFX_report_event_generic_research_lab
+	
+	mean_time_to_happen = { 
+		days = 730
+	}
+	
+	trigger = {
+		has_country_flag = flavor_reset
+		NOT = {
+			has_country_flag = flavor_event_5
+		}
+	}
+	
+	option = {
+		name = flavor.5.a
+		set_country_flag = flavor_event_5
+		random_list = {
+			16 = {
+				random_owned_state = {
+					limit = {
+						is_owned_by = ROOT
+					}
+				add_resource = { type = oil amount = 10 }
+				}
+			}
+			16 = {
+				random_owned_state = {
+					limit = {
+						is_owned_by = ROOT
+					}
+				add_resource = { type = steel amount = 10 }
+				}
+			}
+			16 = {
+				random_owned_state = {
+					limit = {
+						is_owned_by = ROOT
+					}
+				add_resource = { type = aluminium amount = 10 }
+				}
+			}
+			16 = {
+				random_owned_state = {
+					limit = {
+						is_owned_by = ROOT
+					}
+				add_resource = { type = rubber amount = 10 }
+				}
+			}
+			16 = {
+				random_owned_state = {
+					limit = {
+						is_owned_by = ROOT
+					}
+				add_resource = { type = tungsten amount = 10 }
+				}
+			}
+			16 = {
+				random_owned_state = {
+					limit = {
+						is_owned_by = ROOT
+					}
+				add_resource = { type = chromium amount = 10 }
+				}
+			}
+		}
+	}
+}
+
+country_event = { #factory accident
+	id = flavor.6
+	title = flavor.6.t
+	desc = flavor.6.d
+	picture = GFX_report_event_generic_factory
+	
+	mean_time_to_happen = { 
+		days = 730
+	}
+	
+	trigger = {
+		has_country_flag = flavor_reset
+		NOT = {
+			has_country_flag = flavor_event_6
+		}
+	}
+	
+	option = {
+		name = flavor.6.a
+		set_country_flag = flavor_event_6
+		random_owned_state = {
+			limit = {
+				is_owned_by = ROOT
+			}
+			damage_building = { type = industrial_complex damage = 0.9 }
+		}
+	}
+}
+
+country_event = { #techological breakthrough
+	id = flavor.7
+	title = flavor.7.t
+	desc = flavor.7.d
+	picture = GFX_report_event_generic_research_lab
+	
+	mean_time_to_happen = { 
+		days = 730
+	}
+	
+	trigger = {
+		has_country_flag = flavor_reset
+		NOT = {
+			has_country_flag = flavor_event_7
+		}
+	}
+	
+	option = {
+		name = flavor.7.a
+		set_country_flag = flavor_event_7
+		random_list = {
+			33 = {
+				add_tech_bonus = { bonus = 0.4 uses = 1 category = radar_tech }	
+			}
+			33 = {
+				add_tech_bonus = { bonus = 0.4 uses = 1 category = industry }	
+			}
+			33 = {
+				add_tech_bonus = { bonus = 0.4 uses = 1 category = electronics }	
+			}
+		}
+	}
+}
+
+country_event = { #diplomatic quarrel
+	id = flavor.8
+	title = flavor.8.t
+	desc = flavor.8.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	mean_time_to_happen = { 
+		days = 365
+	}
+	
+	trigger = {
+		has_country_flag = flavor_reset
+		NOT = {
+			has_country_flag = flavor_event_8
+		}
+	}
+	
+	immediate = {
+		random_neighbor_country = {
+			save_event_target_as = diplomatic_target	
+		}
+	}
+	
+	option = {
+		name = flavor.8.a
+		set_country_flag = flavor_event_8
+		event_target:diplomatic_target = {
+			add_opinion_modifier = { target = FROM modifier = diplomatic_insult }
+			
+		}
+		random_neighbor_state = {
+				limit = { is_owned_by = event_target:diplomatic_target }
+				add_claim_by = ROOT
+		}
+		random_neighbor_state = {
+				limit = { is_owned_by = event_target:diplomatic_target }
+				add_claim_by = ROOT
+		}
+		random_neighbor_state = {
+				limit = { is_owned_by = event_target:diplomatic_target }
+				add_claim_by = ROOT
+		}
+	}
+}
+
+country_event = { #parade
+	id = flavor.9
+	title = flavor.9.t
+	desc = flavor.9.d
+	picture = GFX_report_event_generic_rally_3
+	
+	mean_time_to_happen = { 
+		days = 730
+	}
+	
+	trigger = {
+		has_country_flag = flavor_reset
+		NOT = {
+			has_country_flag = flavor_event_9
+		}
+		any_neighbor_country = {
+			has_war = no
+		}
+	}
+	
+	option = {
+		name = flavor.9.a
+		set_country_flag = flavor_event_9
+		add_national_unity = 0.02
+	}
+}
+
+country_event = { #political protests
+	id = flavor.10
+	title = flavor.10.t
+	desc = flavor.10.d
+	picture = GFX_report_event_generic_riot
+	
+	mean_time_to_happen = { days = 730 }
+	
+	trigger = {
+		has_country_flag = flavor_reset
+		NOT = {
+			has_country_flag = flavor_event_10
+		}
+	}
+	
+	option = {
+		name = flavor.10.a
+		set_country_flag = flavor_event_10
+		if = {
+			limit = {
+				has_government = democratic
+				OR = { 
+					fascism > 0.02
+				}
+			}
+			add_popularity = { ideology = democratic popularity = -0.02 }
+		}
+		if = {
+			limit = {
+				has_government = fascism
+				OR = { 
+					democratic > 0.02
+				}
+			}
+			add_popularity = { ideology = fascism popularity = -0.02 }
+		}
+		add_political_power = -50
+	}
+}
+
+country_event = { #army experience
+	id = flavor.11
+	title = flavor.11.t
+	desc = flavor.11.d
+	picture = GFX_report_event_generic_army
+	
+	mean_time_to_happen = { days = 730 }
+	
+	trigger = {
+		has_country_flag = flavor_reset
+		NOT = {
+			has_country_flag = flavor_event_11
+		}
+	}
+	
+	option = {
+		name = flavor.11.a
+		set_country_flag = flavor_event_11
+		army_experience = 10
+	}
+}
+
+country_event = { #guns found
+	id = flavor.12
+	title = flavor.12.t
+	desc = flavor.12.d
+	picture = GFX_report_event_generic_factory
+	
+	mean_time_to_happen = { days = 730 }
+
+	trigger = {
+		has_country_flag = flavor_reset
+		NOT = {
+			has_country_flag = flavor_event_12
+		}
+	}
+	
+	option = {
+		name = flavor.12.a
+		set_country_flag = flavor_event_12
+		if = {
+			limit = {
+				date > 1936.1.1
+			}
+			add_equipment_to_stockpile = { type = infantry_weapons amount = 500 }	
+		}
+		if = {
+			limit = {
+				date > 1938.1.1
+			}
+			add_equipment_to_stockpile = { type = infantry_weapons1 amount = 500 }	
+		}
+		if = {
+			limit = {
+				date > 1940.1.1
+			}
+			add_equipment_to_stockpile = { type = infantry_weapons2 amount = 500 }	
+		}
+		if = {
+			limit = {
+				date > 1942.1.1
+			}
+			add_equipment_to_stockpile = { type = improved_infantry_weapons amount = 500 }	
+		}
+		if = {
+			limit = {
+				date > 1944.1.1
+			}
+			add_equipment_to_stockpile = { type = improved_infantry_weapons_2 amount = 500 }	
+		}
+	}
+}
+
+country_event = { #naval experience (HARDY SEAMEN)
+	id = flavor.13
+	title = flavor.13.t
+	desc = flavor.13.d
+	picture = GFX_report_event_ast_navy
+	
+	mean_time_to_happen = { days = 730 }
+	
+	trigger = {
+		has_country_flag = flavor_reset
+		NOT = {
+			has_country_flag = flavor_event_13
+		}
+		any_owned_state = { is_coastal = yes }	
+		has_navy_size = { size > 0 }	
+	}
+	
+	option = {
+		name = flavor.13.a
+		set_country_flag = flavor_event_13
+		navy_experience = 25
+	}
+}
+
+country_event = { #deserters
+	id = flavor.14
+	title = flavor.14.t
+	desc = flavor.14.d
+	picture = GFX_report_event_ast_army
+	
+	mean_time_to_happen = { days = 730 }
+	
+	trigger = {
+		has_army_manpower = { size > 0 }	
+		has_country_flag = flavor_reset
+		NOT = {
+			has_country_flag = flavor_event_14
+		}
+	}
+	
+	option = {
+		name = flavor.14.a
+		set_country_flag = flavor_event_14
+		if = {
+			limit = {
+				has_army_manpower = { size > 0 }
+				has_army_manpower = { size < 10000 }				
+			}
+			add_manpower = -100	
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 10000 }
+				has_army_manpower = { size < 100000 }	
+			}
+			add_manpower = -500
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 100000 }
+				has_army_manpower = { size < 500000 }	
+			}
+			add_manpower = -3000
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 500000 }
+				has_army_manpower = { size < 1000000 }	
+			}
+			add_manpower = -6000
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 1000000 }	
+			}
+			add_manpower = -10000
+		}
+	}
+}
+
+country_event = { #air experience
+	id = flavor.16
+	title = flavor.16.t
+	desc = flavor.16.d
+	picture = GFX_report_event_usa_amelia_earhart_airplane
+	
+	mean_time_to_happen = { 
+		days = 730
+	}
+	
+	trigger = {
+		has_country_flag = flavor_reset
+		NOT = {
+			has_country_flag = flavor_event_16
+		}
+		ROOT = { has_deployed_air_force_size > 1 }	
+	}
+	
+	option = {
+		name = flavor.16.a
+		set_country_flag = flavor_event_16
+		air_experience = 25
+	}
+}
+
+country_event = { #people demand elections
+	id = flavor.17
+	title = flavor.17.t
+	desc = flavor.17.d
+	picture = GFX_report_event_generic_riot
+	
+	mean_time_to_happen = { 
+		days = 730
+	}
+	
+	trigger = {
+		has_country_flag = flavor_reset
+		NOT = {
+			has_country_flag = flavor_event_17
+		}
+		democratic > 4
+		OR = {
+			has_government = fascism
+		}
+	}
+	
+	option = {
+		name = flavor.17.a
+		set_country_flag = flavor_event_17
+		set_politics = { elections_allowed = yes }
+	}
+
+	option = {
+		name = flavor.17.b
+		set_country_flag = flavor_event_17
+		add_political_power = -150
+	}
+		
+}
